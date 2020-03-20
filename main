@@ -1,11 +1,14 @@
 from sense_hat import SenseHat
 import time
+sense = SenseHat()
+
 g = (0, 255, 0)
 y = (255, 255, 0)
 b = (0, 0, 255)
 r = (255, 0, 0)
 w = (255,255,255)
-sense = SenseHat()
+
+#colour palette
 
 board = [[r,r,r,r,r,r,r,r], 
 [r,b,b,b,b,b,b,r], 
@@ -22,7 +25,7 @@ pitch = sense.get_orientation()['pitch']
 roll = sense.get_orientation()['roll'] 
 
 
-def check_wall(x,y,new_x,new_y): 
+def check_wall(x,y,new_x,new_y): #check boundaries
     if board[new_y][new_x] != r:
         return new_x, new_y 
     elif board[new_y][x] != r:
