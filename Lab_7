@@ -1,3 +1,7 @@
+"""
+Orientate and play ball on hole on raspberry pi
+"""
+
 from sense_hat import SenseHat
 import time
 sense = SenseHat()
