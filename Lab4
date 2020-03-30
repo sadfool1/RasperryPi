@@ -1,0 +1,209 @@
+from sense_hat import SenseHat
+import time
+import random
+import time
+
+x = True
+
+while x == True:
+  try:
+    text_r = int(input("Your Red colour of your message:"))
+    
+    if text_r > 255 or text_r < 0:
+        print ("MAKE SURE NONE OF YOUR VALUES GO BELOW 0 or ABOVE 255")
+        x = True
+        time.sleep(0.5)
+        print ("Restarting...")
+        time.sleep(1)
+        continue
+    
+    text_g = int(input("Your Green colour of your message:"))
+    
+    if text_g > 255 or text_g < 0:
+        print ("MAKE SURE NONE OF YOUR VALUES GO BELOW 0 or ABOVE 255")
+        x = True
+        time.sleep(0.5)
+        print ("Restarting...")
+        time.sleep(1)
+        continue
+        
+    text_b = int(input("Your Blue colour of your message:"))
+
+    if text_b > 255 or text_b < 0:
+        print ("MAKE SURE NONE OF YOUR VALUES GO BELOW 0 or ABOVE 255")
+        x = True
+        time.sleep(0.5)
+        print ("Restarting...")
+        time.sleep(1)
+        continue
+    
+    BG_r = int(input("Your Background Red colour of your message:"))
+
+    if BG_r > 255 or BG_r < 0:
+        print ("MAKE SURE NONE OF YOUR VALUES GO BELOW 0 or ABOVE 255")
+        x = True
+        time.sleep(0.5)
+        print ("Restarting...")
+        time.sleep(1)
+        continue
+        
+    BG_g = int(input("Your Background Green colour of your message:"))
+
+    if BG_g > 255 or BG_g < 0:
+        print ("MAKE SURE NONE OF YOUR VALUES GO BELOW 0 or ABOVE 255")
+        x = True
+        time.sleep(0.5)
+        print ("Restarting...")
+        time.sleep(1)
+        continue
+        
+    BG_b = int(input("Your Background Blue colour of your message:"))
+    
+    if BG_b > 255 or BG_b < 0:
+        print ("MAKE SURE NONE OF YOUR VALUES GO BELOW 0 or ABOVE 255")
+        x = True
+        time.sleep(0.5)
+        print ("Restarting...")
+        time.sleep(1)
+        continue
+
+    else:
+      time.sleep(0.5)
+      print ("")
+      time.sleep(1.0)
+      print ("The lower the number the faster the text speed.")
+      time.sleep(1.0)
+      print ("")
+      time.sleep(1)
+      speed = float(input("What Speed of text?"))
+      x = False
+      continue
+      
+      
+  except ValueError:
+    print ("ERROR 101! No strings or floats allowed. Enter only Integers!")
+    time.sleep(0.5)
+    print ("Restarting Kernel...")
+    time.sleep(2.0)
+    x = True
+    continue
+
+
+text = input("What is ur text?")
+
+
+sense = SenseHat()
+sense.show_message(text,
+text_colour = (text_r,text_g,text_b),
+back_colour = (BG_r,BG_g,BG_b),
+scroll_speed = speed)
+
+prompter = input("Play again? Type 'Yes' or 'No':")
+prompt = prompter.upper() 
+
+while prompt == "YES":
+    x = True
+    while x == True:
+        try:
+            text_r = int(input("Your Red colour of your message:"))
+            
+            if text_r > 255 or text_r < 0:
+                print ("MAKE SURE NONE OF YOUR VALUES GO BELOW 0 or ABOVE 255")
+                x = True
+                time.sleep(0.5)
+                print ("Restarting...")
+                time.sleep(1)
+                continue
+    
+            text_g = int(input("Your Green colour of your message:"))
+          
+            if text_g > 255 or text_g < 0:
+                print ("MAKE SURE NONE OF YOUR VALUES GO BELOW 0 or ABOVE 255")
+                x = True
+                time.sleep(0.5)
+                print ("Restarting...")
+                time.sleep(1)
+                continue
+        
+            text_b = int(input("Your Blue colour of your message:"))
+          
+            if text_b > 255 or text_b < 0:
+                print ("MAKE SURE NONE OF YOUR VALUES GO BELOW 0 or ABOVE 255")
+                x = True
+                time.sleep(0.5)
+                print ("Restarting...")
+                time.sleep(1)
+                continue  
+            BG_r = int(input("Your Background Red colour of your message:"))
+            if BG_r > 255 or BG_r < 0:
+                print ("MAKE SURE NONE OF YOUR VALUES GO BELOW 0 or ABOVE 255")
+                x = True
+                time.sleep(0.5)
+                print ("Restarting...")
+                time.sleep(1)
+                continue
+        
+            BG_g = int(input("Your Background Green colour of your message:"))
+            if BG_g > 255 or BG_g < 0:
+                print ("MAKE SURE NONE OF YOUR VALUES GO BELOW 0 or ABOVE 255")
+                x = True
+                time.sleep(0.5)
+                print ("Restarting...")
+                time.sleep(1)
+                continue
+        
+            BG_b = int(input("Your Background Blue colour of your message:"))
+            if BG_b > 255 or BG_b < 0:
+                print ("MAKE SURE NONE OF YOUR VALUES GO BELOW 0 or ABOVE 255")
+                x = True
+                time.sleep(0.5)
+                print ("Restarting...")
+                time.sleep(1)
+                continue
+            else:
+                time.sleep(0.5)
+                print ("")
+                time.sleep(1.0)
+                print ("The lower the number the faster the text speed.")
+                time.sleep(1.0)
+                print ("")
+                time.sleep(1)
+                speed = float(input("What Speed of text?"))
+                x = False
+                continue
+            
+        except ValueError:
+            print ("ERROR 101! No strings or floats allowed. Enter only Integers!")
+            time.sleep(0.5)
+            print ("Restarting Kernel...")
+            time.sleep(2.0)
+            x = True
+            continue
+      
+    text = input("What is ur text?")
+    sense = SenseHat()
+    sense.show_message(text,
+    text_colour = (text_r,text_g,text_b),
+    back_colour = (BG_r,BG_g,BG_b),
+    scroll_speed = speed)
+    prompter = input("Play again? Type 'Yes' or 'No':")
+    prompt = prompter.upper() 
+    
+    if prompt == "YES":
+      x = True
+      continue
+    
+    else:
+      x = False
+      print ("Thank you for playing")
+      for i in range(100):
+        time.sleep(1.0)
+        print ("You may now exit the program")
+        time.sleep(2.0)
+        print ("Goodbye")
+else:
+    for i in range(100):
+        print ("Thank you for playing")
+        time.sleep(1.0)
+        print ("You may now exit the program")
+        time.sleep(2.0)
