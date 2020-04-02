@@ -82,7 +82,8 @@ try:
           print ("Game Loading...")
           time.sleep(1)
           GameOver = False
-      
+          root()
+        
         elif text == "Y":
           time.sleep(1)
           print ("Game Loading...")
@@ -197,6 +198,8 @@ try:
                 
 except ValueError:
     print ("Pls type only Valid Inputs")
+    time.sleep(1)
+    print ("")
     time.sleep(1)
     print ("Game Loading...")
     time.sleep(1)
