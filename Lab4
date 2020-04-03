@@ -101,6 +101,9 @@ scroll_speed = speed)
 prompter = input("Play again? Type 'Yes' or 'No':")
 prompt = prompter.upper() 
 
+if prompt == "NO" or "N":
+    print ("Thank you for playing")
+
 while prompt == "YES":
     x = True
     while x == True:
