@@ -99,10 +99,25 @@ back_colour = (BG_r,BG_g,BG_b),
 scroll_speed = speed)
 
 prompter = input("Play again? Type 'Yes' or 'No':")
-prompt = prompter.upper() 
+prompt = prompter.upper()
 
-if prompt == "NO" or "N":
-    print ("Thank you for playing")
+if prompt == "NO":
+  print ("You typed "
+  + str(prompt) + \
+  ".")
+  time.sleep(1.5)
+  pass
+    
+elif prompt == "N":
+  print ("You typed "
+  + str(prompt) + \
+  ".")
+  time.sleep(1.5)
+  pass
+
+else:
+  pass
+    
 
 while prompt == "YES":
     x = True
